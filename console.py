@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Holberton AirBnB Console """
+""" AirBnB Console """
 import cmd
 import sys
 import json
@@ -15,14 +15,14 @@ from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
-    """ General Class for HBNBCommand """
+    """ Class for HBNBCommand """
     prompt = '(hbnb) '
     classes = {'BaseModel': BaseModel, 'User': User, 'City': City,
                'Place': Place, 'Amenity': Amenity, 'Review': Review,
                'State': State}
 
     def do_quit(self, arg):
-        """ Exit method for quit typing """
+        """ Exit method  """
         exit()
 
     def do_EOF(self, arg):
@@ -31,7 +31,7 @@ class HBNBCommand(cmd.Cmd):
         exit()
 
     def emptyline(self):
-        """ Method to pass when emptyline entered """
+        """ pass when emptyline entered """
         pass
 
     def do_create(self, arg):
@@ -51,7 +51,7 @@ class HBNBCommand(cmd.Cmd):
                     print("** class doesn't exist **")
 
     def do_show(self, arg):
-        """ Method to print instance """
+        """ print instance """
         if len(arg) == 0:
             print('** class name missing **')
             return
